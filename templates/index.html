@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDGE Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>EDGE Bot</h1>
+            <div class="chat-controls">
+                <button onclick="clearChat()">🗑 Clear Chat</button>
+                <button onclick="newChat()">🔄 New Chat</button>
+            </div>
+        </header>
+        <div class="chat-box" id="chat-box">
+            <div class="bot-message">
+                <img src="{{ url_for('static', filename='bot.png') }}" class="icon"> 
+                Hello! I am EDGE Bot. How can I assist you today?
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message..." autofocus>
+            <button id="send-btn" onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
